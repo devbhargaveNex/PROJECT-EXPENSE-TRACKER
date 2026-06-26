@@ -93,3 +93,48 @@
 * Implement Save functionality.
 * Implement loading `Expense` objects from `expenses.txt`.
 * Add exception handling where necessary.
+
+---
+
+## Log 3
+
+**Elapsed Time:** ~42h 24m
+
+**Focused Work:**
+Session 1: ~2.5–3h
+* Session 2: ~2–3h
+* Session 3: ~10min
+* **Total:** ~4:45–6:45h
+
+### Completed
+
+* Implemented the View Expenses feature.
+* Verified that the feature works with the current OOP structure.
+* Committed the completed feature.
+* Pushed changes to the remote repository.
+
+### Problems
+
+* No major implementation issues encountered.
+* Feature integrated cleanly with the existing object-oriented design.
+
+### Decisions
+
+* Continue building one feature at a time.
+* Maintain the workflow of:
+
+  * Implement
+  * Test
+  * Commit
+  * Push
+
+### Git
+
+* Merged `feature-view` into `main`.
+* Pushed latest changes to GitHub.
+
+### Next Session
+
+* Implement Save functionality.
+* Design the load mechanism for `Expense` objects.
+* Begin planning the Delete Expense feature.
