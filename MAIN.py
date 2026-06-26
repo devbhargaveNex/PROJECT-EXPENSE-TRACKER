@@ -25,3 +25,12 @@ while choice != '6':
     elif choice == '2':
         for i in expenses:
             print(f'amount={i.amount} category={i.category} description={i.description} date={i.date}')
+    elif choice == '5':
+        for i in expenses:
+            with open('expenses.txt','a') as f:
+                f.write(i.amount)
+                f.write(i.category)
+                f.write(i.description)
+                f.write(i.date)
+                f.write('\n')
+    
