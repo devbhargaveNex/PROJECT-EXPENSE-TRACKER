@@ -1,5 +1,9 @@
 choice = 0
 expenses = []
+def add(e):
+    exp = e.split(',')
+    expense1 = expense(exp[0],exp[1],exp[2],exp[3])
+    expenses.append(expense1)
 class expense():
     def __init__(self,amount,category,description,date):
         self.amount = amount
@@ -7,6 +11,12 @@ class expense():
         self.description = description
         self.date = date
     
+with open('expenses.txt','r') as f:
+    for line in f:
+        if line != '':
+            add(line)
+        else:
+            break
 
 while choice != '6':
 
@@ -19,9 +29,7 @@ while choice != '6':
     choice = input('enter 1-6 for choice: ')
     if choice == '1':
         exp = input('expense: ')
-        exp = exp.split(',')
-        expense1 = expense(exp[0],exp[1],exp[2],exp[3])
-        expenses.append(expense1)
+        add(exp)
     elif choice == '2':
         for i in expenses:
             print(f'amount={i.amount} category={i.category} description={i.description} date={i.date}')
@@ -29,8 +37,11 @@ while choice != '6':
         for i in expenses:
             with open('expenses.txt','a') as f:
                 f.write(i.amount)
+                f.write(',')
                 f.write(i.category)
+                f.write(',')
                 f.write(i.description)
+                f.write(',')
                 f.write(i.date)
                 f.write('\n')
     
