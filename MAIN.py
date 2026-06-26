@@ -16,12 +16,12 @@ while choice != '6':
     4.SEARCH EXPENSES
     5.SAVE CHANGES
     6.QUIT APPLICATION''')
-
     choice = input('enter 1-6 for choice: ')
     if choice == '1':
         exp = input('expense: ')
         exp = exp.split(',')
         expense1 = expense(exp[0],exp[1],exp[2],exp[3])
         expenses.append(expense1)
+    elif choice == '2':
         for i in expenses:
-            print(i.amount,i.category,i.description,i.date)
+            print(f'amount={i.amount} category={i.category} description={i.description} date={i.date}')
