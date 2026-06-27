@@ -233,3 +233,72 @@ Session 1: ~2.5–3h
 * Implement Search Expense.
 * Add input validation and exception handling.
 * Begin testing the complete application workflow.
+
+## Log 6
+
+**Elapsed Time:** 61h 00m
+
+**Focused Work:**
+Session 1: ~2.5–3h
+* Session 2: ~2–3h
+* Session 3: ~10min
+* Session 4: ~10min
+* Session 5: ~1h
+* Session 6: ~1.5-2h
+* **Total:** ~7:25–9:55h
+
+### Completed
+
+* Implemented loading of saved expenses into memory on application startup.
+* Fixed file persistence bugs related to newline characters.
+* Implemented the Delete Expense feature.
+* Verified that deleting expenses updates the in-memory list correctly.
+* Confirmed Save and Load work together correctly after deleting expenses.
+* Completed the core application workflow:
+
+  * Add
+  * View
+  * Delete
+  * Save
+  * Load
+  * Quit
+
+### Testing Performed
+
+* Tested with an empty `expenses.txt`.
+* Tested loading previously saved expenses.
+* Tested adding new expenses after loading.
+* Tested deleting existing expenses.
+* Tested duplicate expenses.
+* Tested saving after multiple operations.
+* Verified persistence by restarting the application.
+
+### Problems Encountered
+
+* Tracked down an issue where extra blank lines were being written to the file.
+* Discovered that newline characters (`\n`) from file input were being stored inside `Expense` objects.
+* Fixed the issue by cleaning input before object creation.
+
+### Key Realizations
+
+* File input should be cleaned before being converted into objects.
+* Saving becomes straightforward when memory is considered the single source of truth.
+* Debugging is often about tracing the flow of data rather than changing random pieces of code.
+
+### Decisions
+
+* Leave the Search feature for Version 2.
+* Shift focus from adding features to improving code quality.
+* Begin debugging, testing, and refactoring before declaring Version 1 complete.
+
+### Git
+
+* Continued development using feature branches.
+* Merged completed work into `main`.
+
+### Next Session
+
+* Refactor obvious code duplication and simplify logic.
+* Perform a complete debugging pass.
+* Improve error handling and input validation.
+* Begin writing the project README.
